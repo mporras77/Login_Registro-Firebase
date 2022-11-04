@@ -14,6 +14,10 @@ import {AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { VistainicioComponent } from './components/vistainicio/vistainicio.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { FichaComponent } from './components/ficha/ficha.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { ToastrModule } from 'ngx-toastr';
     RegistrarUsuarioComponent,
     VerificarCorreoComponent,
     RecuperarPasswordComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    VistainicioComponent,
+    PerfilComponent,
+    ContactoComponent,
+    FichaComponent
   ],
   imports: [
     BrowserModule,

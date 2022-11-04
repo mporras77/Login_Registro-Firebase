@@ -1,23 +1,67 @@
-<div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-      </ul>
-
-      <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2" (click)="logOut()">LogOut</button>   
-      </div>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INICIO</title>
+    <link rel="stylesheet" href="/PROYECTo/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/7e5b2d153f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo nav-link">Logo</a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+         
+          <li class="nav-menu-item">
+            <a  routerLink="/ficha" class="nav-menu-link nav-link">FICHAS</a>
+          </li>
+          <li class="nav-menu-item">
+            <a routerLink="/perfil" class="nav-menu-link nav-link">USUARUIO</a>
+          </li>
+          <li class="nav-menu-item">
+            <a routerLink="/contacto" class="nav-menu-link nav-link nav-menu-link_active"
+              >Contacto</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-        <h1 class="display-4 fw-normal">Bienvenido!</h1>
-        <p class="fs-5 text-muted">{{ dataUser?.email }}</p>
+    <main>    
+      <div id="menu_Profesor">
+        <div id ="menus">
+        </div>
       </div>
-  </div>
+      <div class="conteiner-slider">
+        <div class="slider" id="slider">
+              <div class="slider__section">
+                  <img src="../../../assets/img/descarga (3).jpeg" alt="" class="slider__img">
+              </div>
+              <div class="slider__section">
+                  <img src="../../../assets/img/Intranet.jpg" alt="" class="slider__img">
+              </div>
+              <div class="slider__section">
+                <img src="../../../assets/img/images.jpeg" alt="" class="slider__img">
+              </div>
+              <div class="slider__section">
+                <img src="../../../assets/img/seguridad-intranets-cover-blog.png" alt="" class="slider__img">
+               </div>
+        </div>
+            <div class="slider_btn slider_btn--right" id="btn-right">&#62;</div>
+            <div class="slider_btn slider_btn--left" id="btn-left">&#60;</div>
+      </div>
+        <script src="slider.js"></script>
+    </main>
+    <div id="menu">
+      <div id ="menu">
+      </div>
+    </div>
+  </body>
+</html>
