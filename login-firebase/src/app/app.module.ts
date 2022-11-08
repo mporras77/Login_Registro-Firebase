@@ -17,6 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { VistainicioComponent } from './components/vistainicio/vistainicio.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+<<<<<<< HEAD
 import { FichaComponent } from './components/ficha/ficha.component';
 
 @NgModule({
@@ -45,3 +46,33 @@ import { FichaComponent } from './components/ficha/ficha.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+=======
+import { FichaComponent } from './components/ficha/ficha.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    RegistrarUsuarioComponent,
+    VerificarCorreoComponent,
+    RecuperarPasswordComponent,
+    SpinnerComponent,
+    VistainicioComponent,
+    PerfilComponent,
+    ContactoComponent,
+    FichaComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(), 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+>>>>>>> 15c4671485021979fa4a49b563da489a7e9523a2
