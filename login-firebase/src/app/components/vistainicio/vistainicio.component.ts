@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CargarScriptsService } from "./../../cargar-scripts.service"
+
 
 @Component({
   selector: 'app-vistainicio',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistainicioComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _CargaScripts: CargarScriptsService) 
+    {
+      _CargaScripts.carga(["carrusel/carrusel"]);
+    }
 
   ngOnInit(): void {
   }
