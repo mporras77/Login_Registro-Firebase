@@ -9,9 +9,9 @@ import { CargarScriptsService } from "./../../cargar-scripts.service"
 })
 export class VistainicioComponent implements OnInit {
 
-  constructor( private _CargaScripts: CargarScriptsService) 
+  constructor( private CargaScripts: CargarScriptsService) 
     {
-      _CargaScripts.carga(["carrusel/carrusel"]);
+      CargaScripts.carga(["carrusel/carrusel"]);
     }
 
   ngOnInit(): void {
