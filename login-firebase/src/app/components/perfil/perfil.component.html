@@ -39,11 +39,30 @@
         <div class="portada-perfil" style="background-image: url('/PROYECTo/img/Intranet.jpg');">
             <div class="sombra"></div>
             <div class="avatar-perfil">
-                <img src="../../../assets/img/images.jpeg" alt="img">
                 <a href="#" class="cambiar-foto">
                     <i class="fas fa-camera"></i> 
-                    <span>Cambiar foto</span>
+                    <span class="table">
+                      <div class="table-cell">
+                        <div class="modal">
+                          <div id="profile">
+                            <div class="dashes"></div>
+                            <label>Click to browse or drag an image here</label></div>
+                          <div class="editable"><i class="fa fa-pencil"></i><h1 contenteditable>Drew Vosburg</h1></div>
+                          <div class="stat">
+                            <div class="label">Shots</div>
+                            <div class="num">40</div>
+                          </div>
+                          <div class="stat">
+                            <div class="label">Projects</div>
+                            <div class="num">1</div>
+                          </div>
+                          <button>Done Editing</button>
+                        </div>
+                      </div>
+                    
+                    <input type="file" id="mediaFile" />>Cambiar foto</span>
                 </a>
+                
             </div>
             <div class="datos-perfil">
                 <h4 class="titulo-usuario">Nombre de usuario</h4>
@@ -69,14 +88,11 @@
                       <a class="btn btn-file"><i class="fa fa-folder-open-o"></i> Seleccionar</a>
                     </div>
                   </div>
-                  
                   <script type="text/javascript">
-                    // http://duckranger.com/2012/06/pretty-file-input-field-in-bootstrap/ 
-                    // Cuando se pulsa el falso manda el click al autentico
+                   
                     $('.btn-file').on('click', function(){
                       $(this).parent().prev().click();
                     });
-                    // Cuando el autentico cambia hace cambiar al falso
                     $('input[type=file]').on('change', function(e){
                       $(this).next().find('input').val($(this).val());
                     });
