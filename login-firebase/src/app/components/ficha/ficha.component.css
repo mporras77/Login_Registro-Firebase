@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #F1FAFF;
+    background: #fff;
 }
 
 .container__cards{
@@ -275,7 +275,7 @@ body{
     .nav-menu-link:hover,
     .nav-menu-link_active {
       background: none;
-      color: #83c5f7;
+      color: #fff;
     }
   
     .nav-toggle {

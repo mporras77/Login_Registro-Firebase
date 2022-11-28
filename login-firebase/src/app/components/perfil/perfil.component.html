@@ -61,13 +61,33 @@
             <ul>
                 <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
                 <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i> Informacion</a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i>Subir Proyecto</a></li>
+                <li><label class="control-label" for="fichero1">Subir Proyecto</label>
+                  <div class="controls">
+                    <input id="fichero1" type="file" style="display:none" name="fichero1">
+                    <div class="input-append">
+                      <input id="falso1" class="input-xlarge" type="text">
+                      <a class="btn btn-file"><i class="fa fa-folder-open-o"></i> Seleccionar</a>
+                    </div>
+                  </div>
+                  
+                  <script type="text/javascript">
+                    // http://duckranger.com/2012/06/pretty-file-input-field-in-bootstrap/ 
+                    // Cuando se pulsa el falso manda el click al autentico
+                    $('.btn-file').on('click', function(){
+                      $(this).parent().prev().click();
+                    });
+                    // Cuando el autentico cambia hace cambiar al falso
+                    $('input[type=file]').on('change', function(e){
+                      $(this).next().find('input').val($(this).val());
+                    });
+                  </script></li>
             </ul>
         </div>
     </div>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-    </div>
+    <br>
+    <label for="file">Progreso del archivo:</label>
+
+<progress id="file" max="100" value="70"> 0% </progress>
 </section>
 
   <!--====  End of tarjeta  ====-->
