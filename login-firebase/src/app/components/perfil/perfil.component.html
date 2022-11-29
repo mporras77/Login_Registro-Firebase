@@ -36,17 +36,17 @@
   
   <section class="perfil-usuario">
     <div class="contenedor-perfil">
-        <div class="portada-perfil" style="background-image: url('/PROYECTo/img/Intranet.jpg');">
+        <div class="portada-perfil" style="background-image: url(../../../assets/img/Reposen3.png)">
             <div class="sombra"></div>
             <div class="avatar-perfil">
-                <a href="#" class="cambiar-foto">
+                <a class="cambiar-foto">
                     <i class="fas fa-camera"></i> 
                     <span class="table">
                       <div class="table-cell">
                         <div class="modal">
                           <div id="profile">
                             <div class="dashes"></div>
-                            <label>Click to browse or drag an image here</label></div>
+                            <label>Haga clic para navegar o arrastre una imagen aquí</label></div>
                           <div class="editable"><i class="fa fa-pencil"></i><h1 contenteditable>Drew Vosburg</h1></div>
                           <div class="stat">
                             <div class="label">Shots</div>
@@ -74,36 +74,36 @@
             <div class="opcciones-perfil">
                 <button type="">Cambiar portada</button>
                 <button type=""><i class="fas fa-wrench"></i></button>
+               
             </div>
         </div>
         <div class="menu-perfil">
             <ul>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i> Publicaciones</a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i> Informacion</a></li>
-                <li><label class="control-label" for="fichero1">Subir Proyecto</label>
-                  <div class="controls">
-                    <input id="fichero1" type="file" style="display:none" name="fichero1">
-                    <div class="input-append">
-                      <input id="falso1" class="input-xlarge" type="text">
-                      <a class="btn btn-file"><i class="fa fa-folder-open-o"></i> Seleccionar</a>
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                   
-                    $('.btn-file').on('click', function(){
-                      $(this).parent().prev().click();
-                    });
-                    $('input[type=file]').on('change', function(e){
-                      $(this).next().find('input').val($(this).val());
-                    });
-                  </script></li>
+                <li><a href="/proyecto" title=""><i class="icono-perfil fas fa-bullhorn"></i> Proyectos</a></li>
+                <li><div class="container">
+                  <h1>subir archivos</h1>
+                  <form enctype="multipart/form-data">
+                      <div class="form-group">
+                          <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
+                      </div>
+          
+                  </form>
+              </div>
+         
+          <script>
+          $("#file-1").fileinput({
+              showCaption: false,
+              browseClass: "btn btn-primary btn-lg",
+              fileType: "any"
+          });
+          </script></li>
             </ul>
         </div>
     </div>
     <br>
     <label for="file">Progreso del archivo:</label>
 
-<progress id="file" max="100" value="70"> 0% </progress>
+<progress id="file" max="100" value="0"> 0% </progress>
 </section>
 
   <!--====  End of tarjeta  ====-->
