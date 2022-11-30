@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/PROYECTo/css/style7.css">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <script defer src="carga.js"></script>
-    <script defer src="fondo.js"></script>
+    <script defer src="../../../assets/js/cargar/cargar.js"></script>
+    <script defer src="../../../assets/js/fondo/fondo.js"></script>
 </head>
 <body>
   <header class="header">
@@ -41,11 +41,16 @@
         <div class="portada-perfil" style="background-image: url(../../../assets/img/Reposen3.png)">
             <div class="sombra"></div>
             <div class="avatar-perfil">
-              <div class="profile-pic-div">
-                <img src="../../../assets/img/image.jpg" id="photo">
-                <input type="file" id="file">
-                <label for="file" id="uploadBtn">Choose Photo</label>
-              </div>                
+              <div class="container">
+                <div class="picture-container">
+                    <div class="picture">
+                        <img src="../../../assets/img/Reposen3.png" class="picture-src" id="wizardPicturePreview" title="">
+                        <input type="file" id="wizard-picture" class="">
+                    </div>
+                     <h6 class="">Choose Picture</h6>
+            
+                </div>
+            </div>               
             </div>
             <div class="datos-perfil">
                 <h4 class="titulo-usuario">Nombre de usuario</h4>
