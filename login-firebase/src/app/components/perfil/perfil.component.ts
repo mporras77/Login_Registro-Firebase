@@ -10,6 +10,7 @@ export class PerfilComponent implements OnInit {
 
   constructor( private CargaScripts: CargarScriptsService) 
   { 
+    CargaScripts.carga(["cagar/cargar"]);
     CargaScripts.carga(["fondo/fondo"]);
   }
 

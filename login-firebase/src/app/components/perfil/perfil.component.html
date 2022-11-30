@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/PROYECTo/css/style7.css">
     <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script defer src="carga.js"></script>
+    <script defer src="fondo.js"></script>
 </head>
 <body>
   <header class="header">
@@ -39,30 +41,11 @@
         <div class="portada-perfil" style="background-image: url(../../../assets/img/Reposen3.png)">
             <div class="sombra"></div>
             <div class="avatar-perfil">
-                <a class="cambiar-foto">
-                    <i class="fas fa-camera"></i> 
-                    <span class="table">
-                      <div class="table-cell">
-                        <div class="modal">
-                          <div id="profile">
-                            <div class="dashes"></div>
-                            <label>Haga clic para navegar o arrastre una imagen aquí</label></div>
-                          <div class="editable"><i class="fa fa-pencil"></i><h1 contenteditable>Drew Vosburg</h1></div>
-                          <div class="stat">
-                            <div class="label">Shots</div>
-                            <div class="num">40</div>
-                          </div>
-                          <div class="stat">
-                            <div class="label">Projects</div>
-                            <div class="num">1</div>
-                          </div>
-                          <button>Done Editing</button>
-                        </div>
-                      </div>
-                    
-                    <input type="file" id="mediaFile" />>Cambiar foto</span>
-                </a>
-                
+              <div class="profile-pic-div">
+                <img src="../../../assets/img/image.jpg" id="photo">
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn">Choose Photo</label>
+              </div>                
             </div>
             <div class="datos-perfil">
                 <h4 class="titulo-usuario">Nombre de usuario</h4>
@@ -80,30 +63,16 @@
         <div class="menu-perfil">
             <ul>
                 <li><a href="/proyecto" title=""><i class="icono-perfil fas fa-bullhorn"></i> Proyectos</a></li>
-                <li><div class="container">
-                  <h1>subir archivos</h1>
-                  <form enctype="multipart/form-data">
-                      <div class="form-group">
-                          <input id="file-1" type="file" class="file" multiple=true data-preview-file-type="any">
-                      </div>
-          
-                  </form>
-              </div>
-         
-          <script>
-          $("#file-1").fileinput({
-              showCaption: false,
-              browseClass: "btn btn-primary btn-lg",
-              fileType: "any"
-          });
-          </script></li>
+                <li><input type="file" id="real-file" hidden="hidden" />
+                  <button type="button" id="custom-button">CHOOSE A FILE</button>
+                  <span id="custom-text">No file chosen, yet.</span></li>
             </ul>
         </div>
     </div>
     <br>
     <label for="file">Progreso del archivo:</label>
 
-<progress id="file" max="100" value="0"> 0% </progress>
+    <progress value="70" max="100">70 %</progress>
 </section>
 
   <!--====  End of tarjeta  ====-->
