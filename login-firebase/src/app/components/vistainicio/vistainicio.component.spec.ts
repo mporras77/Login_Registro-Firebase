@@ -11,7 +11,9 @@ describe('VistainicioComponent', () => {
       declarations: [ VistainicioComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(VistainicioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
