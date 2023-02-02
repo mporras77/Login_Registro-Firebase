@@ -15,12 +15,12 @@
     width: 100%;
     top: 0;
     left: 0;
+
   }
   
   .nav {
     display: flex;
     justify-content: space-between;
-    max-width: 992px;
     margin: 0 auto;
   }
   
@@ -192,3 +192,5 @@
     right: 20px;
     margin-top: -200px;
   }
+  /* menu */
+

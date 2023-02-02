@@ -18,15 +18,20 @@ export class VistainicioComponent implements OnInit {
       CargaScripts.carga(["carrusel/carrusel"]);
     }
 
-  ngOnInit(): void {
-    this.afAuth.currentUser.then(user =>{
-      if(user && user.emailVerified){
-        this.dataUser = user;
-        console.log(user)
-      }else {
-        this.router.navigate(['/vistainicio']);
-      }
-    })
-  }
-}
 
+    ngOnInit(): void {
+      this.afAuth.currentUser.then(user => {
+        if(user && user.emailVerified) {
+          this.dataUser = user;
+          console.log(user)
+        } else {
+          this.router.navigate(['/vistainicio']);
+        }
+      })
+    }
+  
+    logOut() {
+      this.afAuth.signOut().then(() => this.router.navigate(['/login']));
+    }
+  
+  }
